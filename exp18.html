@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+    <div ng-controller="myCtrl">
+        <h1>{{ message }}</h1>
+        <button ng-click="changeMessage()">Change Message</button>
+    </div>
+
+    <script>
+        angular.module('myApp', [])
+        .controller('myCtrl', function($scope) {
+            $scope.message = "Welcome to the AngularJS";
+            
+            $scope.changeMessage = function() {
+                $scope.message = "Message has been changed!";
+            };
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Array & Date Functions</title>
+</head>
+<body>
+
+    <h1>JavaScript Functions</h1>
+
+    <h2>Array</h2>
+    <p>Push: <span id="push"></span></p>
+    <p>Pop: <span id="pop"></span></p>
+    <p>Join: <span id="join"></span></p>
+
+    <h2>Date</h2>
+    <p>Current: <span id="currentDate"></span></p>
+    <p>Day: <span id="getDay"></span></p>
+
+    <script>
+        let arr = [1, 2, 3];
+        arr.push(4);
+        document.getElementById("push").innerText = arr;
+        arr.pop();
+        document.getElementById("pop").innerText = arr;
+        document.getElementById("join").innerText = arr.join(", ");
+
+        let date = new Date();
+        document.getElementById("currentDate").innerText = date;
+        document.getElementById("getDay").innerText = date.getDay();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+const container = document.querySelector("#container");
+const p = document.createElement("p");
+const h3 = document.createElement("h3");
+const div = document.createElement("div");
+p.classList.add("p");
+h3.classList.add("h3");
+div.classList.add("div");
+p.textContent="Hey I'm red!";
+h3.textContent="I'm a blue h3!";
+// div.style["border: black 2px solid", "back"];

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+
+        li button {
+            font-size: 12px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name="item" id="item">
+        <button id="ab">Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let oi = document.querySelector("#ab");
+            oi.addEventListener("mousedown", () => {
+                const it = document.querySelector("ul");
+                const ami = document.createElement("li");
+                const span = document.createElement("span");
+                const itemValue = document.getElementById("item").value;
+                span.textContent = itemValue;
+                ami.appendChild(span);
+                it.appendChild(ami);
+                let jo = document.createElement("input");
+                jo.setAttribute("type", "button");
+                jo.setAttribute("value", "Delete");
+                jo.style.margin = "5px";
+                span.appendChild(jo);
+                jo.addEventListener("mousedown", () => {
+                const hen = document.querySelector("ul");
+                const li = document.querySelector("li");
+                hen.removeChild(li);
+            });
+            });
+        });
+    </script>
+</body>
+
+</html>
