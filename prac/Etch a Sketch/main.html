@@ -1,91 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create n x n Grid</title>
-    <style>
-        /* This ensures that the body takes up the full height and centers everything on the page */
-        html, body {
-            height: 100%; 
-            margin: 0; 
-            display: flex; 
-            justify-content: center; /* Horizontally centers the container */
-            align-items: center; /* Vertically centers the container */
-            font-family: Arial, sans-serif; /* Sets the font style */
-            background-color: #f0f0f0; /* Light background color */
-        }
-
-        /* Styling for the container that holds the grid and input elements */
-        .container {
-            text-align: center; /* Centers the text and elements inside */
-        }
-
-        /* This class is for the grid container which will hold all the grid items */
-        .grid-container {
-            display: grid; /* Uses CSS Grid to arrange the items */
-            gap: 5px; /* Adds space between grid items */
-            margin-top: 20px; /* Adds some space above the grid */
-        }
-
-        /* Basic styling for each individual grid item */
-        .grid-item {
-            width: 30px; /* Sets each grid item to 30px width */
-            height: 30px; /* Sets each grid item to 30px height */
-            background-color: lightblue; /* Default color for each grid item */
-            border: 1px solid #ddd; /* Light border around each grid item */
-        }
-    </style>
+    <title>Etch A Sketch</title>
 </head>
 <body>
-    <div class="container">
-        <!-- Label and input for grid size -->
-        <label for="n">Enter grid size (n x n):</label>
-        <input type="number" id="n" min="1" placeholder="Enter n">
-        <button onclick="generateGrid()">Create Grid</button>
-
-        <!-- The grid will be appended here -->
-        <div id="grid-container" class="grid-container"></div>
+    <script src="main.js"></script>
+    <div class="part1"><div class="part11"><h1 id="name">Etch-A-Sketch</h1></div></div>
+    <div class="part2">
+        <div class="part3">
+            <div class="part33">
+                <label for="division">Number of nXn boxes</label>
+                <input type="range" name="division" id="division" min="0" max="70" value="0">
+                <p class="text"></p>
+            </div>
+        </div>
+        <div class="part4">
+            <div class="part44">
+            </div>
+        </div>
     </div>
-
-    <script>
-        // Function to generate a random color in hexadecimal format
-        const getRandomColor = () => {
-            // Random number between 0 and 16777215 (0xFFFFFF)
-            return '#' + Math.floor(Math.random() * 16777215).toString(16); 
-        }
-
-        // Function to generate the grid when the button is clicked
-        const generateGrid = () => {
-            // Get the value of 'n' from the input field (grid size)
-            const n = document.getElementById('n').value;
-            
-            // If n is less than 1, show an alert and stop the grid generation
-            if (n < 1) return alert("Please enter a valid number greater than 0");
-
-            // Get the grid container where all the grid items will go
-            const gridContainer = document.getElementById('grid-container');
-            gridContainer.innerHTML = ''; // Clear any previous grid
-
-            // Set the grid to have n columns (each column 30px wide)
-            gridContainer.style.gridTemplateColumns = `repeat(${n}, 30px)`; 
-
-            // Loop to create n * n grid items
-            for (let i = 0; i < n * n; i++) {
-                // Create a new div for each grid item
-                let div = document.createElement('div');
-                div.classList.add('grid-item'); // Add the 'grid-item' class for styling
-
-                // Add an event listener for when the mouse enters the grid item
-                div.addEventListener('mouseenter', () => {
-                    // Change the background color of the grid item to a new random color
-                    div.style.backgroundColor = getRandomColor();
-                });
-
-                // Append the newly created grid item to the grid container
-                gridContainer.appendChild(div);
-            }
-        }
-    </script>
 </body>
 </html>

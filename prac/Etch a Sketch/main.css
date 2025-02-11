@@ -1,7 +1,52 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid black; */
 }
-.table {
+body {
+    display: flex;
+    flex-direction: column;
+}
+.part1 {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+    border-radius: 30px;
+}
+.part2 {
+    min-height: 84vh;
+    display: flex;
+    min-width: 99vw
+}
+.part11 {
+    margin-top: 6.5vh;
+}
+#name {
+    color: blue;
+}
+.part3 {
+    width: 49.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightyellow;
+    border-radius: 30px;
+}
+.part4 {
+    min-width: 49.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.part44 {
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
+    overflow: hidden;
+}
+.text {
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
