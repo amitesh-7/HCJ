@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script src="main.js"></script>
+    <div class="cal">
+        <table align="center" width="500px" height="590px">
+            <tr>
+                <th colspan="4"><div class="result"></div></th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="digit" onclick="number(9)">9</div>
+                </th>
+                <th>
+                    <div class="digit" onclick="number(8)">8</div>
+                </th>
+                <th>
+                    <div class="digit" onclick="number(7)">7</div>
+                </th>
+                <th>
+                    <div class="add" onclick="operator('+')">+</div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="digit" onclick="number(6)">6</div>
+                </th>
+                <th>
+                    <div class="digit" onclick="number(5)">5</div>
+                </th>
+                <th>
+                    <div class="digit" onclick="number(4)">4</div>
+                </th>
+                <th>
+                    <div class="sub" onclick="operator('-')">-</div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="digit" onclick="number(3)">3</div>
+                </th>
+                <th>
+                    <div class="digit" onclick="number(2)">2</div>
+                </th>
+                <th>
+                    <div class="digit" onclick="number(1)">1</div>
+                </th>
+                <th>
+                    <div class="mul" onclick="operator('*')">*</div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="clear" id="allowedButton" onclick="clear()">CLEAR</div>
+                </th>
+                <th>
+                    <div class="digit" onclick="number(0)">0</div>
+                </th>
+                <th>
+                    <div class="div" onclick="operator('/')">/</div>
+                </th>
+                <th>
+                    <div class="equals" onclick="equals()">=</div>
+                </th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
